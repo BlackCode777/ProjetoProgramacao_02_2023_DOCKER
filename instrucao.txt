@@ -1,1 +1,19 @@
 https://github.com/cod3rcursos/curso-docker
+
+docker-compose up -d
+
+docker-compose exec db psql -U postgres -c '\l'
+
+docker-compose down _ derruba a aplicação
+
+docker-compose ps
+
+docker-compose up -d _ inicia a aplicação
+
+docker-compose exec db psql -U postgres -f /scripts/check.sql
+
+docker-compose logs -f -t     _ verifica os logs da aplicação
+
+docker-compose down
+
+docker-compose up -d
