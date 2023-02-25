@@ -1,10 +1,14 @@
 import redis
 import json
+import os
 from random import randint
 from time import sleep
 
 if __name__ == '__main__':
-    r = redis.Redis(host='queue', port=6379, db=0)
+    
+    redis_host = os.getenv('REDIS_HOST', 'queue')
+
+    r = redis.Redis(host=redis_host, port=6379, db=0)
 
     print('Aguardando mensagens ... ')
     
