@@ -47,12 +47,12 @@
             image: redis:3.2
             networks:
                 - file
-        workers:
-            image: python:3.6
+        worker:
+            build: worker
             volumes:
                 - ./worker:/worker
             working_dir: /worker
-            command: bash ./app.sh
+            command: worker.py
             networks:
                 - fila
             depends_on:

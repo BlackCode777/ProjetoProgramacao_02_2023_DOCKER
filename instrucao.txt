@@ -17,3 +17,5 @@ docker-compose logs -f -t     _ verifica os logs da aplicação
 docker-compose down
 
 docker-compose up -d
+
+docker-compose up -d --scale worker=3    _     --scale faz a escala dos containers
